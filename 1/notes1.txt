@@ -1,0 +1,45 @@
+Tag ,Element, Attributes
+
+file:///C:/Users/laxma/Downloads/Notes/HTML.pdf
+
+element?
+
+Types of element?
+
+Attributes  : It;s provide additional information to the Element in opening tag
+
+
+
+example of Elements with tag
+
+Emphasize semantic HTML and accessibility.
+
+What is Semantic HTML/Elements: Semantic HTML are meaningful tags that are meaningful to both developer and browsers 
+
+Why do we need Semantic HTML :
+
+Improve readability :Semantic tags make code easier for developers to understand.
+
+Better SEO : Search engines like Google try to understand webpage content. without sematic search engines understand less 
+
+SEO (Search Engine Optimization) is the practice of improving your website’s content and structure to rank higher on search engines like Google
+
+Better accessibility: Accessibility means making websites usable for everyone, including people with disabilities.
+https://www.nvaccess.org/download/?nvdaVersion=2023.3
+Helps screen readers understand the page
+
+Semantic HTML Basics Practice Project:  
+
+
+
+
+
+
+Box model ?What,Why, how?          S1  
+The CSS Box Model is a fundamental concept in web design that treats every HTML element as a rectangular box
+
+Layers of the Box Model
+Content :text,image
+Padding: space between Content and Border
+Border: A line that is around padding
+Margin: space after Border
