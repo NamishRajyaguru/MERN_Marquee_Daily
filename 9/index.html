@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Whiteboard</title>
+    <!-- Linking our CSS whiteboard -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+      We are using a modified version of the Sports Physical Form here 
+      as a dummy structure to demonstrate various CSS selectors in style.css! 
+    -->
+    <h2 id="main-heading" class="title">Sports Physical Form</h2>
+
+    <form action="actionPage.html" method="get">
+
+      <fieldset>
+        <legend>Athlete Information</legend>
+
+        <ul>
+          <li>
+            <label for="fname">First Name:</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your name..."
+            />
+          </li>
+          <li>
+            <label for="school_team">School/Team:</label>
+            <input
+              type="text"
+              id="school_team"
+              value="Parul University"
+              name="school_team"
+              placeholder="Enter your school or Team"
+              readonly
+            />
+          </li>
+          <li>
+            <label for="sports">Sports:</label>
+            <input
+              type="text"
+              id="sports"
+              name="sport"
+              placeholder="Sports..."
+            />
+          </li>
+          <li>
+            <label for="parent_guardian">Parent/ Guardian Name:</label>
+            <input
+              type="text"
+              id="parent_guardian"
+              name="parent_guardian"
+              placeholder="Parent or Guardian.."
+              required
+            />
+          </li>
+
+          <li>
+            <label for="contact">Contact Number:</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Example: +91 525252521"
+              required
+            />
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="medical-history">
+        <legend>Medical History for Athlete</legend>
+
+        <ul>
+          <li>
+            History Of Concussions:
+            <input type="radio" name="concussions" id="concussions-yes" value="concussions-yes" required />
+            <label for="concussions-yes">Yes</label>
+            <input type="radio" name="concussions" id="concussions-no" value="concussions-no" required />
+            <label for="concussions-no">No</label>
+          </li>
+          <li>
+            Previous Surgery?
+            <input type="radio" name="surgery" id="surgery-yes" value="surgery-yes" required />
+            <label for="surgery-yes">Yes</label>
+            <input type="radio" name="surgery" id="surgery-no" value="surgery-no" required />
+            <label for="surgery-no">No</label>
+          </li>
+          <li>
+            Any Bone fracture?
+            <input type="radio" name="bone_fracture" id="bone_fracture-yes" value="bone_fracture-yes" required />
+            <label for="bone_fracture-yes">Yes</label>
+            <input type="radio" name="bone_fracture" id="bone_fracture-no" value="bone_fracture-no" required />
+            <label for="bone_fracture-no">No</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Number & Range</legend>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1">
+        
+        <br><br>
+
+        <label for="points">Points (between 0 and 10):</label>
+        <input type="range" id="points" name="points" min="0" max="10" value="2">
+      </fieldset>
+
+      <fieldset>
+        <legend>CheckBox</legend>
+        <ul>
+            <li>
+                <label name="tnc_check" for="tnc_check">You've read those Terms and Conditions</label>
+                <input type="checkbox" name="tnc_check" id="tnc_check" value="yes_tnc_check" required/>
+            </li>
+        </ul>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" class="btn primary-btn">Submit</button>
+        <button type="reset" class="btn secondary-btn">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>

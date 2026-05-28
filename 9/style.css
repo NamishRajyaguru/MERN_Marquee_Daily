@@ -1,0 +1,172 @@
+/* 
+=====================================================
+  CSS WHITEBOARD: BASICS & SELECTORS
+=====================================================
+This file serves as a visual guide and reference for 
+how different CSS selectors target HTML elements.
+=====================================================
+*/
+
+/* 
+  1. UNIVERSAL SELECTOR (*)
+  Targets EVERY single element on the page.
+  Often used for CSS resets (removing default margins/padding).
+*/
+* {
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+    font-family: Arial, sans-serif;
+}
+
+/* 
+  2. TYPE (ELEMENT) SELECTOR
+  Targets all elements of a specific HTML tag.
+*/
+body {
+    background-color: #f4f4f9;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+fieldset {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* 
+  3. CLASS SELECTOR (.classname)
+  Targets all elements with a specific class attribute.
+  Used when you want to style multiple, potentially different elements the same way.
+*/
+.medical-history {
+    border-color: #ff9800; /* Overrides the fieldset border color above */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.primary-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* 
+  4. ID SELECTOR (#idname)
+  Targets a single, unique element with that specific ID.
+  Higher specificity than class selectors.
+*/
+#main-heading {
+    text-decoration: underline;
+}
+
+#fname {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* 
+  5. DESCENDANT SELECTOR (parent child)
+  Targets elements that are descendants (children, grandchildren, etc.) of a specified element.
+*/
+form ul {
+    list-style-type: none; /* Removes bullets from all unordered lists inside the form */
+    padding: 0;
+}
+
+/* 
+  6. CHILD SELECTOR (parent > child)
+  Targets only direct children of a specified element.
+*/
+fieldset > legend {
+    font-weight: bold;
+    color: #1976d2;
+    background: #e3f2fd;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* 
+  7. GROUPING SELECTOR (selector1, selector2)
+  Applies the same styles to multiple selectors to keep code DRY (Don't Repeat Yourself).
+*/
+input[type="text"], 
+input[type="tel"], 
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 
+  8. ATTRIBUTE SELECTOR ([attribute="value"])
+  Targets elements based on the presence or value of a given attribute.
+*/
+input[required] {
+    border-left: 4px solid #f44336; /* Adds a red left border to required fields */
+}
+
+input[readonly] {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* 
+  9. PSEUDO-CLASS SELECTOR (:pseudo-class)
+  Targets a special state of an element (like hovering, focusing, or being the first child).
+*/
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.btn:hover {
+    opacity: 0.8; /* Makes buttons slightly transparent when hovered */
+}
+
+li:first-child {
+    margin-top: 10px; /* Adds extra margin to the first list item */
+}
+
+/* 
+  10. PSEUDO-ELEMENT SELECTOR (::pseudo-element)
+  Styles a specific part of an element (like the first letter, first line, or placeholder text).
+*/
+::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/*
+  11. ADJACENT SIBLING SELECTOR (+)
+  Targets an element that is directly after another specific element.
+*/
+label + input[type="text"] {
+    display: block; /* Ensures inputs appear on a new line after their labels */
+}
+
+/*
+  12. GENERAL SIBLING SELECTOR (~)
+  Targets all siblings that follow a specific element.
+  (Example omitted here for brevity, but it looks like: h2 ~ p { color: red; })
+*/

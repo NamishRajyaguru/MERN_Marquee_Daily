@@ -1,0 +1,53 @@
+========================================================================
+ACADEMIC NOTES: HTML LISTS
+========================================================================
+
+1. INTRODUCTION TO LISTS
+--------------------------------------------------
+Lists are semantic HTML structures used to group a set of related items. Using appropriate list tags ensures that content is logically grouped, which benefits both human readability and machine parsability (screen readers, search engine spiders).
+
+2. TYPES OF LISTS
+--------------------------------------------------
+HTML provides three primary types of lists: Unordered, Ordered, and Description Lists.
+
+2.1 Unordered Lists (<ul>)
+- Purpose: Used to group a set of items where the order or sequence does NOT matter.
+- Visual Representation: Items are typically marked with bullet points (small black circles).
+- Tag: `<ul>` defines the list container. `<li>` (List Item) defines each item inside the list.
+- CSS Styling: The `list-style-type` property can change the bullet type (e.g., `disc`, `circle`, `square`, `none`).
+
+2.2 Ordered Lists (<ol>)
+- Purpose: Used to group a set of items where the sequence, ranking, or order is critical (e.g., recipes, instructions, rankings).
+- Visual Representation: Items are marked with numbers or letters.
+- Tag: `<ol>` defines the list container. `<li>` defines each item.
+- Attributes specific to `<ol>`:
+  - `type`: Specifies the kind of marker (`1` for numbers, `a` for lowercase letters, `A` for uppercase letters, `i` for lowercase Roman numerals, `I` for uppercase Roman numerals).
+  - `start`: Specifies the starting value of the ordered list (e.g., `start="5"`).
+  - `reversed`: A boolean attribute that specifies the list order should be descending (e.g., 3, 2, 1).
+
+2.3 Description Lists (<dl>)
+- Purpose: Used for a list of terms accompanied by their corresponding descriptions (e.g., glossaries, dictionaries, metadata key-value pairs).
+- Tags:
+  - `<dl>`: Defines the description list container.
+  - `<dt>`: Defines the term (Description Term).
+  - `<dd>`: Defines the description or definition of the preceding term (Description Details).
+- Structure: A `<dl>` contains one or more `<dt>` elements, each followed by one or more `<dd>` elements.
+
+3. NESTED LISTS
+--------------------------------------------------
+- Lists can be nested inside other lists.
+- Structural Rule: A nested list must be placed entirely INSIDE an `<li>` element. It cannot be placed directly inside a `<ul>` or `<ol>` as a sibling to an `<li>`.
+- Example Structure:
+  <ul>
+    <li>Item 1
+      <ul>
+        <li>Sub-item 1.1</li>
+        <li>Sub-item 1.2</li>
+      </ul>
+    </li>
+    <li>Item 2</li>
+  </ul>
+
+4. ACCESSIBILITY AND SEMANTICS
+--------------------------------------------------
+Screen readers interpret lists specifically, announcing the presence of a list and the total number of items it contains. This allows visually impaired users to navigate the list efficiently. Using `<div>` elements styled to look like lists destroys this semantic information and severely harms accessibility.

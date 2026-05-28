@@ -1,0 +1,35 @@
+========================================================================
+ACADEMIC NOTES: IFRAMES (INLINE FRAMES)
+========================================================================
+
+1. INTRODUCTION TO IFRAMES
+--------------------------------------------------
+- Definition: The `<iframe>` (Inline Frame) HTML element represents a nested browsing context, embedding another HTML page into the current one.
+- Usage: Commonly used to embed third-party content such as YouTube videos, Google Maps, advertising banners, or interactive widgets without leaving the parent page.
+- Syntax: `<iframe src="URL" title="description"></iframe>`
+
+2. CRITICAL ATTRIBUTES
+--------------------------------------------------
+- `src`: Specifies the URL (absolute or relative) of the page to embed.
+- `title`: An essential accessibility attribute. Screen readers rely on the `title` attribute to identify the content of the iframe. It should accurately describe the embedded content.
+- `width` & `height`: Specifies the dimensions of the iframe in pixels (by default). Can also be controlled via CSS.
+- `name`: Specifies a name for the iframe, which can be used as the target for form submissions or hyperlinks (`<a target="iframe_name">`).
+- `allow`: Specifies a feature policy for the iframe. It allows the developer to restrict or grant access to browser features like the microphone, camera, or fullscreen capabilities (e.g., `allow="fullscreen; camera"`).
+- `loading`: Supports native lazy loading. Setting `loading="lazy"` defers loading the iframe until it reaches a calculated distance from the viewport, saving bandwidth and improving initial page load time.
+
+3. SECURITY AND THE `sandbox` ATTRIBUTE
+--------------------------------------------------
+Embedding third-party content poses significant security risks, primarily Cross-Site Scripting (XSS) and clickjacking. The `sandbox` attribute is a critical defense mechanism.
+- Purpose: When the `sandbox` attribute is present, the iframe is treated as being from a unique origin, and it restricts various capabilities (like executing scripts or submitting forms) by default.
+- Usage: `<iframe sandbox="value1 value2">`
+- Common Sandbox Flags:
+  - `allow-scripts`: Allows the embedded document to run JavaScript.
+  - `allow-same-origin`: Allows the iframe to maintain its origin (otherwise it's forced into a unique origin), which is necessary for reading cookies or accessing its own local storage.
+  - `allow-forms`: Allows form submission inside the iframe.
+  - `allow-popups`: Allows the iframe to open new windows.
+
+4. ACCESSIBILITY CONSIDERATIONS
+--------------------------------------------------
+- Always include a descriptive `title` attribute. Example: `<iframe src="..." title="YouTube video tutorial on HTML iframes"></iframe>`.
+- If the iframe content is purely decorative, `title` is still required but can be set to "decorative content".
+- Ensure the embedded content itself is accessible, though developers often have limited control over third-party embedded documents.

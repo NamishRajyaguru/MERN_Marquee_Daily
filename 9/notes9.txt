@@ -1,0 +1,63 @@
+========================================================================
+ACADEMIC NOTES: CSS BASICS AND SELECTORS
+========================================================================
+
+1. INTRODUCTION TO CSS
+--------------------------------------------------
+- Definition: CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation (layout, colors, fonts) of a document written in HTML.
+- Separation of Concerns: HTML provides the structure (the "bones"), while CSS provides the presentation (the "skin").
+- Cascading: Refers to the algorithm used to determine which rule applies if multiple rules match a particular element. The cascade considers specificity, source order, and importance (`!important`).
+
+2. INTEGRATION METHODS
+--------------------------------------------------
+1. Inline CSS: Using the `style` attribute directly on an HTML element. Highest specificity, but poorest maintainability. Avoid unless necessary dynamically via JS.
+2. Internal CSS: Using the `<style>` tag within the `<head>` of the HTML document. Useful for single-page templates.
+3. External CSS: Using a separate `.css` file linked via the `<link>` tag. The standard best practice for scalable architecture.
+
+3. CSS RULE STRUCTURE
+--------------------------------------------------
+A CSS rule consists of a Selector and a Declaration Block.
+- Selector: Points to the HTML element you want to style (e.g., `h1`).
+- Declaration Block: Contains one or more declarations separated by semicolons (e.g., `{ color: blue; font-size: 12px; }`).
+- Declaration: Includes a CSS property name and a value, separated by a colon (e.g., `color: blue`).
+
+4. CSS SELECTORS (In-Depth)
+--------------------------------------------------
+Selectors are patterns used to select the element(s) you want to style.
+
+4.1 Simple Selectors
+- Universal Selector (`*`): Selects all elements. Commonly used for CSS resets (e.g., removing default margin/padding).
+- Type/Element Selector (`p`, `h1`, `div`): Selects elements based on their HTML tag name.
+- Class Selector (`.className`): Selects elements with a specific `class` attribute. Classes can be applied to multiple elements.
+- ID Selector (`#idName`): Selects an element with a specific `id` attribute. IDs MUST be unique within a page.
+
+4.2 Combinators (Relationship Selectors)
+- Descendant Selector (`space`): `div p` selects all `<p>` elements that are inside a `<div>`, regardless of nesting depth.
+- Child Selector (`>`): `ul > li` selects only `<li`> elements that are direct children of a `<ul>`.
+- Adjacent Sibling Selector (`+`): `h1 + p` selects the first `<p>` element that is placed immediately after an `<h1>`.
+- General Sibling Selector (`~`): `h1 ~ p` selects all `<p>` elements that are siblings and follow an `<h1>`.
+
+4.3 Attribute Selectors
+- `[attribute]`: Selects elements with a specific attribute (e.g., `[target]`).
+- `[attribute="value"]`: Selects elements with a specific attribute and exact value (e.g., `input[type="text"]`).
+
+4.4 Pseudo-classes
+- Used to define a special state of an element.
+- Interaction states: `:hover` (mouse over), `:active` (being clicked), `:focus` (element has focus, crucial for accessibility).
+- Structural states: `:first-child`, `:last-child`, `:nth-child(n)`.
+- Link states: `:link` (unvisited), `:visited`.
+
+4.5 Pseudo-elements
+- Used to style specified parts of an element.
+- `::before`: Inserts virtual content before the element's actual content.
+- `::after`: Inserts virtual content after the element's actual content.
+- `::first-letter`, `::first-line`: Targets typographic features.
+- `::placeholder`: Targets the placeholder text in inputs.
+
+5. SPECIFICITY
+--------------------------------------------------
+Specificity is the mathematical system browsers use to resolve conflicting CSS rules.
+Calculated by counting (Inline styles, IDs, Classes/Attributes/Pseudo-classes, Elements/Pseudo-elements).
+- An ID selector (`#nav`) overrides a class selector (`.nav`).
+- A class selector overrides an element selector (`ul`).
+- `!important` breaks the cascade and overrides all normal specificity rules. Use with extreme caution.

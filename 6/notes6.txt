@@ -1,0 +1,48 @@
+========================================================================
+ACADEMIC NOTES: HTML TABLES
+========================================================================
+
+1. INTRODUCTION TO TABLES
+--------------------------------------------------
+- Purpose: HTML tables are used exclusively for presenting tabular data—information that naturally belongs in a grid of rows and columns (e.g., financial data, schedules, statistics).
+- Anti-pattern: Tables should NEVER be used for page layout. Modern layouts should utilize CSS Flexbox or CSS Grid. Using tables for layout destroys semantic meaning and severely harms accessibility and responsive design.
+
+2. BASIC TABLE STRUCTURE
+--------------------------------------------------
+A standard table is composed of the following structural tags:
+- `<table>`: The container element for the entire table.
+- `<tr>` (Table Row): Defines a single horizontal row within the table.
+- `<th>` (Table Header): Defines a header cell. Text in `<th>` is typically bold and centered by default. Screen readers use headers to provide context for data cells.
+- `<td>` (Table Data): Defines a standard data cell.
+
+Example:
+<table>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Data A</td>
+    <td>Data B</td>
+  </tr>
+</table>
+
+3. ADVANCED TABLE SEMANTICS
+--------------------------------------------------
+To provide better structure and accessibility for complex tables, HTML provides semantic grouping elements:
+- `<caption>`: Must be the first child of a `<table>`. It acts as the title or description of the table, essential for screen readers.
+- `<thead>`: Groups the header rows (`<tr>` containing `<th>`).
+- `<tbody>`: Groups the primary data rows. A table can have multiple `<tbody>` elements to section data.
+- `<tfoot>`: Groups footer rows (e.g., sums, totals). Structurally, it is placed below the `<tbody>`.
+
+4. CELL MERGING (SPANNING)
+--------------------------------------------------
+Cells can be merged horizontally or vertically using attributes applied to `<th>` or `<td>` tags.
+- `colspan`: Merges cells horizontally across columns. E.g., `<td colspan="2">` makes the cell span across two columns.
+- `rowspan`: Merges cells vertically down rows. E.g., `<td rowspan="3">` makes the cell span down three rows.
+- Note: When a cell spans multiple columns or rows, you must omit the corresponding `<td>` or `<th>` elements in the subsequent columns or rows to prevent grid distortion.
+
+5. ACCESSIBILITY CONSIDERATIONS
+--------------------------------------------------
+- Scope Attribute: Applied to `<th>` elements to explicitly define whether the header applies to a row, column, row group, or column group. Example: `<th scope="col">Name</th>` or `<th scope="row">Total</th>`. This is critical for screen readers parsing complex tables.
+- Avoid nesting tables: Nested tables make data extremely difficult for assistive technologies to interpret.

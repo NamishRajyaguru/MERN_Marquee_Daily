@@ -1,0 +1,47 @@
+========================================================================
+ACADEMIC NOTES: MULTIMEDIA IN HTML (IMAGES, AUDIO, VIDEO)
+========================================================================
+
+1. IMAGES (<img>)
+--------------------------------------------------
+- Definition: The `<img>` tag is an empty element used to embed an image into an HTML page.
+- Key Attributes:
+  - `src` (Source): REQUIRED. Contains the path (URL) to the image file.
+  - `alt` (Alternative Text): REQUIRED for accessibility. It provides a text alternative for screen readers and displays if the image fails to load. If an image is purely decorative, use a blank alt attribute (`alt=""`).
+  - `width` & `height`: Defines the dimensions of the image in pixels. Specifying these prevents Cumulative Layout Shift (CLS) as the browser reserves space before the image loads.
+  - `loading="lazy"`: Defers off-screen image loading until the user scrolls near them, vastly improving performance.
+
+2. AUDIO (<audio>)
+--------------------------------------------------
+- Definition: The `<audio>` element is used to embed sound content in documents.
+- Supported Formats: MP3, WAV, OGG.
+- Attributes:
+  - `controls`: Displays the browser's default audio controls (play/pause, volume, timeline).
+  - `autoplay`: Starts playing the audio automatically when the page loads. (Heavily restricted by modern browsers for user experience).
+  - `loop`: Restarts the audio automatically when it finishes.
+  - `muted`: Mutes the audio by default.
+- Fallback Content: Text placed between `<audio>` and `</audio>` is displayed only if the browser does not support the audio element.
+
+3. VIDEO (<video>)
+--------------------------------------------------
+- Definition: The `<video>` element is used to embed video content.
+- Supported Formats: MP4, WebM, OGG.
+- Attributes: Shares `controls`, `autoplay`, `loop`, and `muted` with `<audio>`.
+  - `poster`: Specifies an image to be shown while the video is downloading, or until the user hits the play button.
+- Autoplay Policies: Most modern browsers only allow autoplaying videos if the `muted` attribute is also present.
+
+4. THE <source> ELEMENT
+--------------------------------------------------
+To ensure cross-browser compatibility, it is best practice to provide multiple media formats. The `<source>` element is placed inside `<audio>` or `<video>` to specify multiple alternative media resources.
+- The browser will parse the `<source>` elements sequentially and use the first format it supports.
+- Example:
+  <video controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+5. ACCESSIBILITY IN MEDIA
+--------------------------------------------------
+- The `<track>` element is used as a child of `<video>` and `<audio>` to specify subtitles, closed captions, and text descriptions.
+- Attributes include `kind="captions"`, `src="subtitles_en.vtt"`, `srclang="en"`, and `label="English"`. Providing captions is essential for deaf or hard-of-hearing users.

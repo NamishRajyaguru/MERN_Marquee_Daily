@@ -1,45 +1,45 @@
-Tag ,Element, Attributes
+========================================================================
+ACADEMIC NOTES: HTML FOUNDATIONS & SEMANTICS
+========================================================================
 
-file:///C:/Users/laxma/Downloads/Notes/HTML.pdf
+1. INTRODUCTION TO HTML
+--------------------------------------------------
+- Definition: HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page semantically.
+- HyperText: Refers to links that connect web pages to one another.
+- Markup Language: A system for annotating a document in a way that is syntactically distinguishable from the text. HTML uses "tags" to annotate text.
 
-element?
+2. DOCUMENT STRUCTURE
+--------------------------------------------------
+A standard HTML5 document consists of the following boilerplate:
+- `<!DOCTYPE html>`: The Document Type Declaration. It informs the browser about the version of HTML used (HTML5). It is not an HTML tag, but an instruction to the web browser.
+- `<html>`: The root element of an HTML page. All other elements must be descendants of this tag.
+- `<head>`: Contains meta-information about the HTML document (e.g., character set, title, linked stylesheets, scripts). This section is not rendered in the viewport.
+- `<body>`: Defines the document's body. It contains all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
-Types of element?
+3. TAGS, ELEMENTS, AND ATTRIBUTES
+--------------------------------------------------
+- Tags: Keywords surrounded by angle brackets (e.g., `<p>`). They normally come in pairs: an opening tag `<p>` and a closing tag `</p>`.
+- Elements: An HTML element is defined by a start tag, some content, and an end tag. E.g., `<p>This is an element.</p>`.
+  - Empty Elements: Elements that do not have content and do not require a closing tag (e.g., `<br>`, `<hr>`, `<img>`, `<input>`).
+- Attributes: Provide additional information about elements. They are always specified in the start tag and usually come in name/value pairs (e.g., `href="https://example.com"`).
+  - Core Attributes: `id` (unique identifier), `class` (non-unique identifier for CSS/JS), `style` (inline CSS), `title` (tooltip text).
 
-Attributes  : It;s provide additional information to the Element in opening tag
+4. SEMANTIC HTML
+--------------------------------------------------
+- Definition: Semantic HTML introduces meaning to the web page rather than just presentation. Semantic tags clearly describe their meaning to both the browser and the developer.
+- Non-semantic elements: `<div>` and `<span>`. They tell nothing about their content.
+- Semantic elements: `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`.
+- Importance of Semantic HTML:
+  1. Accessibility: Screen readers use semantic tags to navigate the page and read content logically to visually impaired users.
+  2. SEO (Search Engine Optimization): Search engines prioritize semantic tags (like `<h1>`, `<article>`) to understand the page's hierarchy and context, improving rankings.
+  3. Maintainability: Makes the code significantly easier to read and maintain for developers.
 
-
-
-example of Elements with tag
-
-Emphasize semantic HTML and accessibility.
-
-What is Semantic HTML/Elements: Semantic HTML are meaningful tags that are meaningful to both developer and browsers 
-
-Why do we need Semantic HTML :
-
-Improve readability :Semantic tags make code easier for developers to understand.
-
-Better SEO : Search engines like Google try to understand webpage content. without sematic search engines understand less 
-
-SEO (Search Engine Optimization) is the practice of improving your website’s content and structure to rank higher on search engines like Google
-
-Better accessibility: Accessibility means making websites usable for everyone, including people with disabilities.
-https://www.nvaccess.org/download/?nvdaVersion=2023.3
-Helps screen readers understand the page
-
-Semantic HTML Basics Practice Project:  
-
-
-
-
-
-
-Box model ?What,Why, how?          S1  
-The CSS Box Model is a fundamental concept in web design that treats every HTML element as a rectangular box
-
-Layers of the Box Model
-Content :text,image
-Padding: space between Content and Border
-Border: A line that is around padding
-Margin: space after Border
+5. THE CSS BOX MODEL (Introduction)
+--------------------------------------------------
+- Every HTML element is represented as a rectangular box in the browser's rendering engine.
+- Components of the Box Model (from inside out):
+  1. Content: The actual content of the box, where text and images appear.
+  2. Padding: Clears an area around the content. Padding is transparent and inside the element's background.
+  3. Border: A border that goes around the padding and content.
+  4. Margin: Clears an area outside the border. The margin is transparent and pushes other elements away.
+- Understanding the Box Model is crucial for layout and spacing in CSS.

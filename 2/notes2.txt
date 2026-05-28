@@ -1,0 +1,36 @@
+========================================================================
+ACADEMIC NOTES: STRUCTURAL ELEMENTS & DISPLAY TYPES
+========================================================================
+
+1. BLOCK-LEVEL VS. INLINE ELEMENTS
+--------------------------------------------------
+Understanding the default display behavior of HTML elements is critical for web layout. Every HTML element has a default display value depending on what type of element it is. The two most common display values are block and inline.
+
+1.1 Block-Level Elements:
+- Behavior: A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can). It has a top and a bottom margin by default.
+- Dimensionality: You can set `width` and `height` properties on block-level elements.
+- Common Examples: `<div>`, `<p>`, `<h1>` through `<h6>`, `<ul>`, `<ol>`, `<li>`, `<header>`, `<footer>`, `<section>`, `<article>`.
+
+1.2 Inline Elements:
+- Behavior: An inline element does not start on a new line and only takes up as much width as necessary. It sits inline with the text.
+- Dimensionality: You CANNOT explicitly set `width` and `height` on inline elements. Vertical margins and paddings are generally ignored in terms of pushing other elements vertically.
+- Common Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`, `<b>`, `<i>`, `<br>`, `<input>`.
+
+2. THE <div> AND <span> ELEMENTS
+--------------------------------------------------
+These two elements are widely used as structural "hooks" for CSS styling and JavaScript manipulation. They are intrinsically non-semantic, meaning they carry no implied meaning about the content they contain.
+
+2.1 The `<div>` Element (Division):
+- Type: Block-level.
+- Purpose: Used as a generic container to group block-elements to format them with CSS.
+- Usage: Ideal for creating layout structures (grids, columns, wrappers).
+- Drawback: Overuse leads to "divitis"—a deeply nested, unreadable, and non-accessible HTML structure. Always prefer semantic alternatives (like `<section>` or `<article>`) when appropriate.
+
+2.2 The `<span>` Element:
+- Type: Inline.
+- Purpose: Used as a generic container for inline content.
+- Usage: Ideal for styling a specific piece of text within a larger block of text (e.g., changing the color of a single word inside a paragraph).
+
+3. MODERN LAYOUT CONSIDERATIONS
+--------------------------------------------------
+While `<div>` and `<span>` are fundamental, modern web development relies heavily on CSS Flexbox and Grid, applied to these containers, to achieve responsive and complex two-dimensional layouts. Understanding the baseline block/inline distinction is the prerequisite for mastering these advanced CSS modules.
