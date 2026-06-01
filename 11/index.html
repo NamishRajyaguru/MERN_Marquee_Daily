@@ -12,29 +12,41 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="#" class="logo-badge">
-                    <img src="20241212055950_flipkart.avif" alt="f">
-                    <span class="logo-text">Flipkart</span>
+        <div class="nav-top-row">
+            <div class="brand-links">
+                <a href="#" class="brand-btn active">
+                    <img src="assets/20241212055950_flipkart.avif" alt="f">
+                    <span>Flipkart</span>
+                </a>
+                <a href="#" class="brand-btn travel">
+                    <span class="material-icons" style="color: #ff5e5e; font-size: 20px;">flight</span>
+                    <span>Travel</span>
                 </a>
             </div>
+            <div class="location-box">
+                <span class="material-icons" style="font-size: 16px; margin-right: 4px;">location_on</span>
+                <span style="color: #212121; font-weight: 500;">Location not set</span>
+                <a href="#" class="location-link">Select delivery location <span class="material-icons" style="font-size: 14px;">chevron_right</span></a>
+            </div>
+        </div>
+        <div class="nav-container">
             <div class="search-bar">
-                <button><span class="material-icons">search</span></button>
+                <button><span class="material-icons" style="color: #878787;">search</span></button>
                 <input type="text" placeholder="Search for Products, Brands and More">
             </div>
             <div class="nav-links">
-                <a href="#" class="nav-item login-btn">
-                    <span class="material-icons">account_circle</span> Login
+                <a href="#" class="nav-item login-dropdown">
+                    <span class="material-icons" style="font-size: 20px; margin-right: 6px;">account_circle</span>
+                    Login
+                    <span class="material-icons" style="font-size: 16px; margin-left: 4px;">expand_more</span>
                 </a>
-                <a href="#" class="nav-item">
-                    <span class="material-icons">storefront</span> Become a Seller
-                </a>
-                <div class="more-dropdown nav-item" style="padding: 0 4px;">
-                    <span class="material-icons" style="margin: 0;">more_vert</span>
+                <div class="nav-item">
+                    More
+                    <span class="material-icons" style="font-size: 16px; margin-left: 4px;">expand_more</span>
                 </div>
                 <a href="#" class="cart nav-item">
-                    <span class="material-icons">shopping_cart</span> Cart
+                    <span class="material-icons" style="font-size: 20px; margin-right: 6px;">shopping_cart</span>
+                    Cart
                 </a>
             </div>
         </div>
@@ -42,16 +54,20 @@
 
     <nav class="categories">
         <div class="cat-item">
-            <img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="Grocery">
-            <p>Grocery</p>
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="For You">
+            <p>For You</p>
+        </div>
+        <div class="cat-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/0d75b34f7d8fbcb3.png?q=100" alt="Fashion">
+            <p>Fashion</p>
         </div>
         <div class="cat-item">
             <img src="https://rukminim2.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="Mobiles">
             <p>Mobiles</p>
         </div>
         <div class="cat-item">
-            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/0d75b34f7d8fbcb3.png?q=100" alt="Fashion">
-            <p>Fashion</p>
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="Beauty">
+            <p>Beauty</p>
         </div>
         <div class="cat-item">
             <img src="https://rukminim2.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="Electronics">
@@ -65,443 +81,144 @@
             <img src="https://rukminim2.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="Appliances">
             <p>Appliances</p>
         </div>
+        <div class="cat-item">
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="Toys, baby">
+            <p>Toys, baby...</p>
+        </div>
+        <div class="cat-item">
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="Food & Health">
+            <p>Food & Health</p>
+        </div>
     </nav>
 
     <main class="main-content">
-        <div class="product-section">
-            <div class="section-header">
-                <h2>Best of Sports Shoes</h2>
-                <button class="view-all-btn">View All</button>
+        <div class="banner-row">
+            <div class="banner-card">
+                <img src="assets/banner_jewellery.png" alt="Jewellery">
             </div>
-            <div class="product-grid">
-                <!-- Shoe Card 1 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Premium Sports Shoe">
-                        <div class="favorite-icon"><span class="material-icons" style="color:#ff4343">favorite</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Puma</h3>
-                        <p class="title">Hustle V2 Running Shoes For Men</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.2 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(1,245)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹1,299</span>
-                            <span class="original-price">₹3,999</span>
-                            <span class="discount">67% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Shoe Card 2 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400" alt="Premium Sports Shoe">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Nike</h3>
-                        <p class="title">Revolution 6 Running Shoes For Men</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.5 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(3,892)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹2,195</span>
-                            <span class="original-price">₹3,695</span>
-                            <span class="discount">40% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-                
-                <!-- Shoe Card 3 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=400" alt="Premium Sports Shoe">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Adidas</h3>
-                        <p class="title">Flodean Running Shoes For Men</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.1 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(845)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹1,499</span>
-                            <span class="original-price">₹2,999</span>
-                            <span class="discount">50% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-                
-                <!-- Shoe Card 4 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400" alt="Premium Sports Shoe">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Reebok</h3>
-                        <p class="title">Energy Runner Shoes For Men</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.3 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(2,110)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹1,199</span>
-                            <span class="original-price">₹2,499</span>
-                            <span class="discount">52% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Shoe Card 5 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?w=400" alt="Premium Sports Shoe">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Under Armour</h3>
-                        <p class="title">Charged Pursuit 3 Running Shoes</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.4 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(1,112)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹2,499</span>
-                            <span class="original-price">₹4,999</span>
-                            <span class="discount">50% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Shoe Card 6 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400" alt="Premium Sports Shoe">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Asics</h3>
-                        <p class="title">Gel-Contend 7 Running Shoes</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.6 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(892)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹1,999</span>
-                            <span class="original-price">₹3,499</span>
-                            <span class="discount">42% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
+            <div class="banner-card">
+                <img src="assets/banner_phones.png" alt="Phones">
+            </div>
+            <div class="banner-card">
+                <img src="assets/banner_accessories.png" alt="Accessories">
             </div>
         </div>
 
-        <div class="product-section" style="margin-top: 16px;">
-            <div class="section-header">
-                <h2>Top Offers on Electronics</h2>
-                <button class="view-all-btn">View All</button>
+        <div class="themed-section orange-theme">
+            <div class="themed-header">
+                <h2>Appliance for Cool Summer</h2>
+                <div class="themed-arrow"><span class="material-icons">arrow_forward</span></div>
             </div>
-            <div class="product-grid">
-                <!-- Electronics Card 1 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400" alt="Premium Laptop">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
+            <div class="themed-content">
+                <div class="themed-grid">
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_earbuds.png" alt="True Wireless"></div>
+                        <div class="themed-title">True Wireless</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="brand">Apple</h3>
-                        <p class="title">MacBook Air M2 (8GB/256GB)</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.8 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(5,245)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹99,900</span>
-                            <span class="original-price">₹1,14,900</span>
-                            <span class="discount">13% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_earbuds.png" alt="Neckband"></div>
+                        <div class="themed-title">Neckband</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                </div>
-
-                <!-- Electronics Card 2 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400" alt="Wireless Headphones">
-                        <div class="favorite-icon"><span class="material-icons" style="color:#ff4343">favorite</span></div>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_speaker.png" alt="Speakers"></div>
+                        <div class="themed-title">Speakers</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="brand">Sony</h3>
-                        <p class="title">WH-1000XM5 Noise Cancelling</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.7 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(3,892)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹26,990</span>
-                            <span class="original-price">₹34,990</span>
-                            <span class="discount">22% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_speaker.png" alt="Trimmers"></div>
+                        <div class="themed-title">Trimmers</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                </div>
-                
-                <!-- Electronics Card 3 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400" alt="Smartwatch">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_watch.png" alt="Smart Watches"></div>
+                        <div class="themed-title">Smart Watches</div>
+                        <div class="themed-discount">Min. 40% Off</div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="brand">Samsung</h3>
-                        <p class="title">Galaxy Watch 4 Classic</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.4 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(845)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹12,999</span>
-                            <span class="original-price">₹34,999</span>
-                            <span class="discount">62% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-                
-                <!-- Electronics Card 4 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400" alt="Camera">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Canon</h3>
-                        <p class="title">EOS M50 Mark II Mirrorless</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.6 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(2,110)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹57,999</span>
-                            <span class="original-price">₹60,995</span>
-                            <span class="discount">4% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Electronics Card 5 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400" alt="Tablet">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Apple</h3>
-                        <p class="title">iPad Air (5th Gen) 64GB</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.9 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(2,341)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹54,900</span>
-                            <span class="original-price">₹59,900</span>
-                            <span class="discount">8% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Electronics Card 6 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400" alt="Bluetooth Speaker">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">JBL</h3>
-                        <p class="title">Flip 6 Bluetooth Speaker</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.5 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(4,512)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹8,999</span>
-                            <span class="original-price">₹11,999</span>
-                            <span class="discount">25% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_earbuds.png" alt="Headphones"></div>
+                        <div class="themed-title">Headphones</div>
+                        <div class="themed-discount">Min. 60% Off</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="product-section" style="margin-top: 16px;">
-            <div class="section-header">
-                <h2>Trending in Fashion</h2>
-                <button class="view-all-btn">View All</button>
+        <div class="spotlight-section">
+            <div class="spotlight-header">
+                <h2>Brands in Spotlight</h2>
             </div>
-            <div class="product-grid">
-                <!-- Fashion Card 1 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=400" alt="Casual Shirt">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Levis</h3>
-                        <p class="title">Men Regular Fit Checkered Shirt</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.1 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(1,245)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹899</span>
-                            <span class="original-price">₹2,199</span>
-                            <span class="discount">59% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
+            <div class="spotlight-grid">
+                <div class="spotlight-card">
+                    <img src="assets/banner_jewellery.png" alt="GIVA">
+                    <div class="spotlight-discount">Up to 65% Off</div>
+                    <div class="spotlight-title">925 silver jewellery</div>
                 </div>
+                <div class="spotlight-card">
+                    <img src="assets/product_apparel.png" alt="BEAR HOUSE">
+                    <div class="spotlight-discount">Min. 70% Off</div>
+                    <div class="spotlight-title">Stylish casuals</div>
+                </div>
+                <div class="spotlight-card">
+                    <img src="assets/product_shoes.png" alt="ABROS">
+                    <div class="spotlight-discount">Min. 65% Off</div>
+                    <div class="spotlight-title">Men's Abros shoes</div>
+                </div>
+                <div class="spotlight-card">
+                    <img src="assets/product_watch.png" alt="boAt Watch">
+                    <div class="spotlight-discount">Min. 50% Off</div>
+                    <div class="spotlight-title">Smartwatches</div>
+                </div>
+                <div class="spotlight-card">
+                    <img src="assets/product_earbuds.png" alt="boAt Airdopes">
+                    <div class="spotlight-discount">Min. 40% Off</div>
+                    <div class="spotlight-title">True Wireless</div>
+                </div>
+                <div class="spotlight-card">
+                    <img src="assets/product_watch.png" alt="Noise">
+                    <div class="spotlight-discount">Min. 60% Off</div>
+                    <div class="spotlight-title">Premium Watches</div>
+                </div>
+            </div>
+        </div>
 
-                <!-- Fashion Card 2 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400" alt="Jeans">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
+        <div class="themed-section orange-theme">
+            <div class="themed-header">
+                <h2>Home Decor & Furnishing</h2>
+                <div class="themed-arrow"><span class="material-icons">arrow_forward</span></div>
+            </div>
+            <div class="themed-content">
+                <div class="themed-grid">
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_decor.png" alt="Wall Decor"></div>
+                        <div class="themed-title">Wall Decor</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="brand">Wrangler</h3>
-                        <p class="title">Men Slim Fit Black Jeans</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.3 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(3,892)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹1,299</span>
-                            <span class="original-price">₹2,799</span>
-                            <span class="discount">53% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_decor.png" alt="Clocks"></div>
+                        <div class="themed-title">Clocks</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                </div>
-                
-                <!-- Fashion Card 3 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400" alt="Jacket">
-                        <div class="favorite-icon"><span class="material-icons" style="color:#ff4343">favorite</span></div>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_decor.png" alt="Lighting"></div>
+                        <div class="themed-title">Lighting</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="brand">Puma</h3>
-                        <p class="title">Men Solid Bomber Jacket</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.5 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(845)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹1,999</span>
-                            <span class="original-price">₹4,999</span>
-                            <span class="discount">60% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_decor.png" alt="Mosquito Nets"></div>
+                        <div class="themed-title">Mosquito Nets</div>
+                        <div class="themed-discount">Min. 50% Off</div>
                     </div>
-                </div>
-                
-                <!-- Fashion Card 4 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400" alt="Sneakers">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_decor.png" alt="Showpieces"></div>
+                        <div class="themed-title">Showpieces</div>
+                        <div class="themed-discount">Min. 40% Off</div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="brand">Nike</h3>
-                        <p class="title">Air Max Casual Sneakers</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.6 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(2,110)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹4,999</span>
-                            <span class="original-price">₹7,995</span>
-                            <span class="discount">37% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Fashion Card 5 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400" alt="T-Shirt">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">U.S. Polo Assn.</h3>
-                        <p class="title">Men Solid Polo Neck T-Shirt</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.2 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(1,845)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹799</span>
-                            <span class="original-price">₹1,599</span>
-                            <span class="discount">50% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
-                    </div>
-                </div>
-
-                <!-- Fashion Card 6 -->
-                <div class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1559551409-dadc959f76b8?w=400" alt="Watch">
-                        <div class="favorite-icon"><span class="material-icons">favorite_border</span></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="brand">Tommy Hilfiger</h3>
-                        <p class="title">Analog Watch - For Men</p>
-                        <div class="rating-row">
-                            <div class="rating-badge">4.4 <span class="material-icons star-icon">star</span></div>
-                            <span class="reviews">(954)</span>
-                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" class="f-assured" alt="f-assured">
-                        </div>
-                        <div class="price-row">
-                            <span class="current-price">₹4,999</span>
-                            <span class="original-price">₹8,999</span>
-                            <span class="discount">44% off</span>
-                        </div>
-                        <p class="free-delivery">Free delivery</p>
+                    <div class="themed-card">
+                        <div class="themed-img-wrap"><img src="assets/product_decor.png" alt="Figurines"></div>
+                        <div class="themed-title">Figurines</div>
+                        <div class="themed-discount">Min. 60% Off</div>
                     </div>
                 </div>
             </div>
