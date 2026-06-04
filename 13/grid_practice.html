@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Practice</title>
+    <style>
+        body {
+            background-color: #2b2d4f; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1.2fr 2fr 2fr 1.2fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            width: 700px;
+            height: 450px;
+        }
+
+        .green { background-color: #7bc756; }
+        .red { background-color: #e83a40; }
+        .yellow { background-color: #f6b432; }
+
+        .item-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+        }
+        
+        .item-2 {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+        }
+        
+        .item-3 {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+        
+        .item-4 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        
+        .item-5 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        
+        .item-6 {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+        
+        .item-7 {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        
+        .item-8 {
+            grid-column: 4 / 5;
+            grid-row: 2 / 4;
+        } 
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="green item-1"></div>
+        <div class="green item-2"></div>
+        <div class="red item-3"></div>
+        <div class="yellow item-4"></div>
+        <div class="red item-5"></div>
+        <div class="red item-6"></div>
+        <div class="yellow item-7"></div>
+        <div class="green item-8"></div>
+    </div>
+
+</body>
+</html>
