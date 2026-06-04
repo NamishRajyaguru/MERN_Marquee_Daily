@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Practice 2</title>
+    <style>
+        body {
+            background-color: #2b2d4f; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 80px 2fr 2fr 80px;
+            gap: 15px;
+            width: 800px;
+            height: 600px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .header {
+            background-color: #ffa500;
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+        }
+
+        .sidebar {
+            background-color: #ff5e00;
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+
+        .content-1 {
+            background-color: #cc0000;
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .content-2 {
+            background-color: #c400ff;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .content-3 {
+            background-color: #c400ff;
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        .footer {
+            background-color: #ffa500;
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item header">HEADER</div>
+        <div class="item sidebar">SIDEBAR</div>
+        <div class="item content-1">CONTENT 1</div>
+        <div class="item content-2">CONTENT 2</div>
+        <div class="item content-3">CONTENT 3</div>
+        <div class="item footer">FOOTER</div>
+    </div>
+
+</body>
+</html>
