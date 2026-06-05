@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Practice 3</title>
+    <style>
+        body {
+            background-color: #f0f2f5; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 220px);
+            gap: 20px;
+            width: 900px;
+            padding: 20px;
+        }
+
+        .card {
+            border-radius: 24px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            color: #2b2b2b;
+            box-sizing: border-box;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            color: #1a1a1a;
+        }
+
+        .card p {
+            margin: 0;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .card-customization {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            background-color: #b9b1e4;
+        }
+        
+        .card-customization p {
+            margin-top: auto;
+        }
+
+        .card-scheduling {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            background-color: #e09ba9;
+            justify-content: center;
+        }
+        
+        .card-scheduling p {
+            max-width: 60%;
+        }
+
+        .card-wallet {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background-color: #cce0a5;
+            justify-content: flex-end;
+        }
+
+        .card-inbox {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            background-color: #fbf0b5;
+        }
+
+        .card-send-gifts {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            background-color: #e5a775;
+            justify-content: flex-end;
+        }
+
+        .card-reminders {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            background-color: #b8cbe1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="card card-customization">
+            <h2>Customization</h2>
+            <p>Use a pre-designed template or personalize with video, stickers, fonts, and more</p>
+        </div>
+        
+        <div class="card card-scheduling">
+            <h2>Scheduling</h2>
+            <p>Schedule all your cards and gifts now and we'll send them later</p>
+        </div>
+        
+        <div class="card card-wallet">
+            <h2>Wallet</h2>
+            <p>Access all your gifts and save up your Givingli Cash</p>
+        </div>
+        
+        <div class="card card-inbox">
+            <h2>Inbox</h2>
+            <p>Track your gifts, group chats, and sent cards</p>
+        </div>
+        
+        <div class="card card-send-gifts">
+            <h2>Send Gifts</h2>
+            <p>Send as a group with friends or individually</p>
+        </div>
+        
+        <div class="card card-reminders">
+            <h2>Reminders</h2>
+            <p>Never miss a birthday again</p>
+        </div>
+    </div>
+
+</body>
+</html>
