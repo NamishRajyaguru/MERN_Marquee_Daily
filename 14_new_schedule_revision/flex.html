@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            border: 2px solid black;
+            height: 100vh;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-flow: column wrap; */
+            /* flex-flow: column-reverse wrap; */
+            /* flex-flow: column wrap-reverse; */
+            /* flex-flow: row wrap;
+            flex-flow: row-reverse wrap;
+            flex-flow: row wrap-reverse; */
+            /* justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: baseline; */
+            justify-content: center;
+            /* justify-content: end; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around;
+            justify-content: space-evenly; */
+            align-items: center;
+            /* align-items: end; */
+            /* align-items: start; */
+            /* align-items: baseline; */
+            /* align-items: stretch; */
+            /* align-content: last baseline; */
+        }
+
+        .box {
+            border: 2px solid green;
+            height: 50px;
+            width: 50px;
+            /* margin: 10px */
+        }
+
+        #box1 {
+            order: 1;
+            background-color: aqua;
+        }
+
+        #box5 {
+            order: 2;
+            background-color: bisque;
+        }
+
+        #box7 {
+            order: -1;
+            background-color: blueviolet;
+            flex-shrink: 1;
+        }
+
+        #box6 {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        #box4 {
+            flex-grow: 2;
+            align-self: self-end;
+        }
+
+        #box8 {
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box" id="box1">batch-1</div>
+        <div class="box" id="box2">batch-2</div>
+        <div class="box" id="box3">batch-3</div>
+        <div class="box" id="box4">batch-4</div>
+        <div class="box" id="box5">batch-5</div>
+        <div class="box" id="box6">batch-6</div>
+        <div class="box" id="box7">batch-7</div>
+        <div class="box" id="box8">batch-8</div>
+        <div class="box" id="box9">batch-9</div>
+        <div class="box" id="box10">batch-10</div>
+        <div class="box" id="box11">batch-11</div>
+        <div class="box" id="box12">batch-12</div>
+        <div class="box" id="box13">batch-13</div>
+    </div>
+</body>
+
+</html>
