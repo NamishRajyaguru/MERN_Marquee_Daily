@@ -268,6 +268,22 @@ console.log(5 === "5");  // false
 
 
 // -----------------------------------------
+// Spread Operator (...)
+// -----------------------------------------
+
+// Expands an iterable (like an array or string) into individual elements.
+// Used for copying or merging arrays/objects.
+
+
+// -----------------------------------------
+// Rest vs Spread Operator
+// -----------------------------------------
+
+// - Rest: Gathers remaining elements into a single array. Used in function parameters or destructuring.
+// - Spread: Expands elements from an array/object. Used in function calls or array/object literals.
+
+
+// -----------------------------------------
 // Best Practices
 // -----------------------------------------
 
