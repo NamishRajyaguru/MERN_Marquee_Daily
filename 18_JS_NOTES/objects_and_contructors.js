@@ -32,8 +32,8 @@
         age: 20
     };
 
-    console.log(person.name);
-    console.log(person["age"]);
+    console.log(person.name); // Static Keys
+    console.log(person["age"]); // Dynamic Keys
 }
 
 
