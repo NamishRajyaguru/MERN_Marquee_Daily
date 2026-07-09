@@ -495,6 +495,44 @@
 
 
 // -----------------------------------------
+// Shallow Copy
+// -----------------------------------------
+
+// Copies top-level properties, nested objects are referenced.
+
+{
+    let person1 = {
+        name: "Namish",
+        address: { city: "Vadodara" }
+    };
+
+    let person2 = { ...person1 };
+    person2.address.city = "Pune";
+
+    console.log(person1.address.city);
+}
+
+
+// -----------------------------------------
+// Deep Copy
+// -----------------------------------------
+
+// Creates a completely independent copy of an object.
+
+{
+    let person1 = {
+        name: "Namish",
+        address: { city: "Vadodara" }
+    };
+
+    let person2 = structuredClone(person1);
+    person2.address.city = "Pune";
+
+    console.log(person1.address.city);
+}
+
+
+// -----------------------------------------
 // Best Practices
 // -----------------------------------------
 
