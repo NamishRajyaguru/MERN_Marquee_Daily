@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .elements {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .incdec {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+
+        .incdec button{
+            margin: 10px;
+        }
+
+        .elements p {
+            font-size: xx-large;
+        }
+
+        button {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "elements">
+        <p id="count">0</p>
+        <div class = "incdec">
+            <button onclick="increment()">Increment</button>
+            <button onclick="decrement()">Decrement</button>
+        </div>
+        <button onclick="reset()">Reset</button>
+    </div>
+    <script src="counter.js"></script>
+</body>
+</html>
