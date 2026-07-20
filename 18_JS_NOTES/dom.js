@@ -495,6 +495,8 @@ document.addEventListener("keydown", (e) => {
 // focus  -> Element gains focus
 // blur   -> Element loses focus
 // reset  -> Form reset
+// invalid-> Validation failed
+// select -> Text select
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
