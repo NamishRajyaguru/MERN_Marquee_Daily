@@ -444,6 +444,181 @@
     });
 }
 
+// =========================================
+// Common Event Listeners
+// =========================================
+
+
+// -----------------------------------------
+// Mouse Events
+// -----------------------------------------
+
+// click       -> Single mouse click
+// dblclick    -> Double mouse click
+// mousedown   -> Mouse button pressed
+// mouseup     -> Mouse button released
+// mouseenter  -> Mouse enters an element
+// mouseleave  -> Mouse leaves an element
+// mouseover   -> Mouse enters element or child
+// mouseout    -> Mouse leaves element or child
+// mousemove   -> Mouse moves over an element
+// contextmenu -> Right-click menu
+
+
+// Example
+
+button.addEventListener("click", () => {
+    console.log("Clicked");
+});
+
+
+// -----------------------------------------
+// Keyboard Events
+// -----------------------------------------
+
+// keydown -> Key is pressed
+// keyup   -> Key is released
+// keypress -> (Deprecated)
+
+document.addEventListener("keydown", (e) => {
+    console.log(e.key);
+});
+
+
+// -----------------------------------------
+// Form Events
+// -----------------------------------------
+
+// submit -> Form submitted
+// input  -> Value changes while typing
+// change -> Value changes after losing focus
+// focus  -> Element gains focus
+// blur   -> Element loses focus
+// reset  -> Form reset
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+});
+
+
+// -----------------------------------------
+// Window Events
+// -----------------------------------------
+
+// load   -> Page fully loaded
+// unload -> Page unloaded (Deprecated)
+// resize -> Window resized
+// scroll -> User scrolls
+// online -> Internet connected
+// offline -> Internet disconnected
+
+window.addEventListener("resize", () => {
+    console.log(window.innerWidth);
+});
+
+
+// -----------------------------------------
+// Clipboard Events
+// -----------------------------------------
+
+// copy  -> User copies
+// cut   -> User cuts
+// paste -> User pastes
+
+input.addEventListener("paste", () => {
+    console.log("Pasted");
+});
+
+
+// -----------------------------------------
+// Drag & Drop Events
+// -----------------------------------------
+
+// drag
+// dragstart
+// dragend
+// dragenter
+// dragleave
+// dragover
+// drop
+
+element.addEventListener("drop", () => {
+    console.log("Dropped");
+});
+
+
+// -----------------------------------------
+// Touch Events (Mobile)
+// -----------------------------------------
+
+// touchstart
+// touchmove
+// touchend
+// touchcancel
+
+element.addEventListener("touchstart", () => {
+    console.log("Touched");
+});
+
+
+// -----------------------------------------
+// Pointer Events
+// -----------------------------------------
+
+// pointerdown
+// pointerup
+// pointermove
+// pointerenter
+// pointerleave
+// pointercancel
+
+element.addEventListener("pointermove", () => {
+    console.log("Pointer Moving");
+});
+
+
+// -----------------------------------------
+// Media Events
+// -----------------------------------------
+
+// play
+// pause
+// ended
+// volumechange
+// timeupdate
+// loadedmetadata
+// canplay
+
+video.addEventListener("play", () => {
+    console.log("Playing");
+});
+
+
+// -----------------------------------------
+// Animation Events
+// -----------------------------------------
+
+// animationstart
+// animationend
+// animationiteration
+
+element.addEventListener("animationend", () => {
+    console.log("Animation Finished");
+});
+
+
+// -----------------------------------------
+// Transition Events
+// -----------------------------------------
+
+// transitionstart
+// transitionend
+// transitionrun
+// transitioncancel
+
+element.addEventListener("transitionend", () => {
+    console.log("Transition Complete");
+});
 
 // -----------------------------------------
 // Best Practices
