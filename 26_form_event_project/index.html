@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Demo</title>
+</head>
+<body>
+    <form id = "form">
+        <label>Name: </label>
+        <input type = "text" id = "name" required>
+
+        <br>
+
+        <label>Course: </label>
+        <select id = "course">
+            <option value = "select">Select</option>
+            <option >MERN</option>
+            <option >DSA</option>
+            <option >AIML</option>
+        </select>
+
+        <br>
+
+        <button type = "submit">Submit</button>
+        <button type = "reset">Reset</button>
+    </form>
+    <h3 id = "status"></h3>
+
+    <script>
+        const form = document.getElementById('form')
+        const name = document.getElementById('name')
+        const course = document.getElementById('course')
+        const status = document.getElementById('status')
+
+        name.addEventListener('focus', ()=>{
+            status.innerText = "Focus Event"
+        })
+
+        name.addEventListener('change', ()=>{
+            status.innerText = "Final: " + name.value
+        })
+
+        name.addEventListener('blur', ()=>{
+            status.innerText = "Blur Event"
+        })
+
+        name.addEventListener('input', ()=>{
+            status.innerText = "Typing: " + name.value
+        })
+    </script>
+</body>
+</html>
