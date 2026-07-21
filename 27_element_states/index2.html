@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form id="registerForm" novalidate>
+        <label>Name: </label>
+        <input type="text" id="name" required><br><br>
+        
+        <label>Email: </label>
+        <input type="email" id="email" required><br><br>
+        
+        <label>Course: </label>
+        <input type="text" id="course" required><br><br>
+        
+        <button type="submit">Register</button>
+    </form>
+
+    <h3 id="message"></h3>
+
+    <script>
+        const form = document.getElementById('registerForm');
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const course = document.getElementById('course');
+        const message = document.getElementById('message');
+
+        const inputs = [name, email, course];
+
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                input.style.borderColor = '';
+            });
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.checkValidity() || input.value.trim() === '') {
+                    input.style.border = '2px solid red';
+                    isValid = false;
+                } else {
+                    input.style.border = '';
+                }
+            });
+
+            if (isValid) {
+                message.innerText = "";
+                
+                setTimeout(() => {
+                    message.innerText = "successfully registered";
+                    form.reset();
+                    inputs.forEach(input => input.style.border = '');
+                }, 1000);
+            } else {
+                message.innerText = "";
+            }
+        });
+    </script>
+</body>
+</html>
