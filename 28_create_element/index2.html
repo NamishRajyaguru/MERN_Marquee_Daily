@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id = "list">
+        <li id="first">HTML</li>
+        <li id="second">CSS</li>
+    </ul>
+
+    <script>
+        const list = document.getElementById('list')
+        const first = document.getElementById('first')
+        const second = document.getElementById('second')
+
+        const l1 = document.createElement('li')
+        const l2 = document.createElement('li')
+
+        l1.innerText = "JS"
+
+        // list.appendChild(l1)
+
+        l2.innerText = "R prog."
+        // list.appendChild(l2)
+
+        const l3 = document.createElement('li')
+        l3.innerText = "MERN"
+
+        list.append(l1, l2, l3)
+
+        // insertBefore: inserts before a reference node
+        const l4 = document.createElement('li')
+        l4.innerText = "Python (insertBefore CSS)"
+        list.insertBefore(l4, second)
+
+        // before: inserts before the element itself
+        const l5 = document.createElement('li')
+        l5.innerText = "Java (before HTML)"
+        first.before(l5)
+
+        // after: inserts after the element itself
+        const l6 = document.createElement('li')
+        l6.innerText = "C++ (after HTML)"
+        first.after(l6)
+
+        // Note: insertAfter does not exist natively, 
+        // but we can achieve it using insertBefore with nextSibling
+        const l7 = document.createElement('li')
+        l7.innerText = "C# (insertAfter HTML using nextSibling)"
+        list.insertBefore(l7, first.nextSibling)
+
+        // The issue was that first.lastChild and first.firstChild are children of the <li>, not the <ul>.
+        // list.insertBefore() requires the reference node to be a direct child of the list.
+        // Also, it's safer to use firstElementChild and lastElementChild to avoid targeting whitespace text nodes.
+
+        const l8 = document.createElement('li')
+        l8.innerText = "C# (insertBefore the last item)"
+        list.insertBefore(l8, list.lastElementChild)
+
+        const l9 = document.createElement('li')
+        l9.innerText = "C# (insertBefore the first item)"
+        list.insertBefore(l9, list.firstElementChild)
+    
+        const l10 = document.createElement('li')
+        l10.innerText = "C# (prepend)"
+        list.prepend(l10)
+    </script>
+</body>
+</html>
