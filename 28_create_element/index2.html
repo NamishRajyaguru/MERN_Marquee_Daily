@@ -67,6 +67,41 @@
         const l10 = document.createElement('li')
         l10.innerText = "C# (prepend)"
         list.prepend(l10)
+
+
+        // remove(): completely removes an element from the DOM
+        const toRemove = document.createElement('li')
+        toRemove.innerText = "I will be removed (remove)"
+        list.append(toRemove)
+        
+        // Remove it directly!
+        toRemove.remove()
+
+        // removeChild(): removes a specific child element from its parent
+        const childToRemove = document.createElement('li')
+        childToRemove.innerText = "I will be removed (removeChild)"
+        list.append(childToRemove)
+
+        // Remove it via the parent list
+        list.removeChild(childToRemove)
+
+        
+        // Changing the display property to hide an element visually
+        // (It still exists in the DOM, just invisible)
+        const hiddenElement = document.createElement('li')
+        hiddenElement.innerText = "You can't see me! (display: none)"
+        list.append(hiddenElement)
+        
+        // Hide it:
+        hiddenElement.style.display = 'none'
+
+        // Changing display property to make an element visible
+        const visibleElement = document.createElement('li')
+        visibleElement.innerText = "I am visible! (display: list-item)"
+        list.append(visibleElement)
+        
+        // li elements naturally use 'list-item' display or 'block'
+        visibleElement.style.display = 'list-item'
     </script>
 </body>
 </html>
