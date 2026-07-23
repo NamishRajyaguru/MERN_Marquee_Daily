@@ -6,54 +6,121 @@
     <title>To-Do List</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9eff5;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 28px;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
         }
         input {
-            padding: 5px;
-            font-size: 14px;
+            flex: 1;
+            padding: 12px 15px;
+            font-size: 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 6px;
             outline: none;
+            transition: border-color 0.2s;
+        }
+        input:focus {
+            border-color: #74b9ff;
         }
         button {
-            padding: 5px 10px;
+            padding: 12px 16px;
             font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            margin-left: 5px;
+            border: none;
+            border-radius: 6px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        button:active {
+            transform: scale(0.97);
+        }
+        #addBtn {
+            background-color: #0984e3;
+            color: white;
+        }
+        #addBtn:hover {
+            background-color: #076bbb;
+        }
+        #removeLastBtn {
+            background-color: #fdcb6e;
+            color: #2d3436;
+        }
+        #removeLastBtn:hover {
+            background-color: #e1b259;
         }
         ul {
             list-style-type: none;
             padding: 0;
-            margin-top: 20px;
+            margin: 0;
         }
         li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 12px 16px;
             margin-bottom: 10px;
-            background-color: #f9f9f9;
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            width: fit-content;
+            border-radius: 8px;
+            border-left: 5px solid #00cec9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 16px;
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         li button {
-            margin-left: 15px;
-            padding: 3px 8px;
-            font-size: 12px;
-            background-color: #ff4c4c;
+            padding: 6px 12px;
+            font-size: 13px;
+            background-color: #d63031;
             color: white;
             border: none;
-            border-radius: 3px;
+            border-radius: 4px;
+            margin-left: 15px;
+        }
+        li button:hover {
+            background-color: #b92728;
         }
     </style>
 </head>
 <body>
-    <h2>To-Do List</h2>
-    
-    <div>
-        <input type="text" id="taskInput" placeholder="Enter a task">
-        <button id="addBtn">Add</button>
-        <button id="removeLastBtn">Remove Last Task</button>
+    <div class="container">
+        <h2>To-Do List</h2>
+        
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addBtn">Add</button>
+            <button id="removeLastBtn">Remove Last</button>
+        </div>
+        
+        <ul id="taskList"></ul>
     </div>
-    
-    <ul id="taskList"></ul>
 
     <script>
         const taskInput = document.getElementById('taskInput');
