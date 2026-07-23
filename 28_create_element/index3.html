@@ -18,9 +18,16 @@
         h2 {
             color: #2c3e50;
             margin-top: 0;
-            margin-bottom: 25px;
+            margin-bottom: 5px;
             font-size: 28px;
             text-align: center;
+        }
+        #taskCount {
+            text-align: center;
+            color: #636e72;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
         .container {
             background-color: #ffffff;
@@ -66,11 +73,11 @@
         #addBtn:hover {
             background-color: #076bbb;
         }
-        #removeLastBtn {
+        #removeAllBtn {
             background-color: #fdcb6e;
             color: #2d3436;
         }
-        #removeLastBtn:hover {
+        #removeAllBtn:hover {
             background-color: #e1b259;
         }
         ul {
@@ -112,11 +119,12 @@
 <body>
     <div class="container">
         <h2>To-Do List</h2>
+        <p id="taskCount">Total Tasks: 0</p>
         
         <div class="input-group">
             <input type="text" id="taskInput" placeholder="Enter a task">
             <button id="addBtn">Add</button>
-            <button id="removeLastBtn">Remove Last</button>
+            <button id="removeAllBtn">Remove All</button>
         </div>
         
         <ul id="taskList"></ul>
@@ -125,8 +133,13 @@
     <script>
         const taskInput = document.getElementById('taskInput');
         const addBtn = document.getElementById('addBtn');
-        const removeLastBtn = document.getElementById('removeLastBtn');
+        const removeAllBtn = document.getElementById('removeAllBtn');
         const taskList = document.getElementById('taskList');
+        const taskCount = document.getElementById('taskCount');
+
+        function updateCount() {
+            taskCount.innerText = `Total Tasks: ${taskList.children.length}`;
+        }
 
         taskInput.addEventListener('input', () => {
             taskInput.style.border = '';
@@ -148,6 +161,7 @@
 
             removeBtn.addEventListener('click', () => {
                 li.remove(); 
+                updateCount();
             });
 
             li.append(removeBtn);
@@ -156,12 +170,13 @@
 
             taskInput.value = '';
             taskInput.style.border = '';
+            updateCount();
         });
 
-        removeLastBtn.addEventListener('click', () => {
-            if (taskList.lastElementChild) {
-                taskList.removeChild(taskList.lastElementChild);
-            }
+        removeAllBtn.addEventListener('click', () => {
+            // Remove all children
+            taskList.innerHTML = '';
+            updateCount();
         });
     </script>
 </body>
