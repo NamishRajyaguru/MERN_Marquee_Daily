@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Traversal Project</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: #f2f2f2;
+      padding: 30px;
+    }
+
+    h1{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #controls button{
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    #container{
+      width: 700px;
+      margin: auto;
+    }
+
+    .card{
+      background: white;
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    .fav {
+        background-color: gold;
+    }
+
+    .action{
+      margin-top: 15px;
+    }
+
+    .action button{
+      margin-right: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    #result{
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  
+    <h1>Student Directory</h1>
+  
+    <div id="controls">
+      <button id="firstBtn">First Student</button>
+      <button id="lastBtn">Last Student</button>
+      <button id="highlightBtn">Highlight All</button>
+      <button id="resetBtn">Reset</button>
+      <button id="countBtn">Total Students</button>
+    </div>
+  
+    <div id="container">
+      <div class="card">
+        <h2>Ravi</h2>
+        <p>MERN Stack Developer</p>
+        <div class="action">
+        <button class="prevBtn">Previous</button>
+        <button class="nextBtn">Next</button>
+        <button class="favoriteBtn">Favorite</button>
+        <button class="deleteBtn">Delete</button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <h2>Yash</h2>
+        <p>Python Developer</p>
+        <div class="action">
+        <button class="prevBtn">Previous</button>
+        <button class="nextBtn">Next</button>
+        <button class="favoriteBtn">Favorite</button>
+        <button class="deleteBtn">Delete</button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <h2>Bhavik</h2>
+        <p>AIML Developer</p>
+        <div class="action">
+        <button class="prevBtn">Previous</button>
+        <button class="nextBtn">Next</button>
+        <button class="favoriteBtn">Favorite</button>
+        <button class="deleteBtn">Delete</button>
+        </div>
+      </div>
+    </div>
+  
+    <h2 id="result">Total Students : 3</h2>
+  
+    <script src="script.js"></script>
+  
+  </body>
+</html>
