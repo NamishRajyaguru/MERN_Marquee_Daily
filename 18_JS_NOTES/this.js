@@ -80,7 +80,7 @@ hello();
 // Arrow functions DO NOT have their own this.
 // They inherit it from the surrounding scope.
 
-const person = {
+const person2 = {
 
     name: "Bob",
 
