@@ -16,12 +16,27 @@ const accounts = []
 const accountForm = document.getElementById('accountForm')
 const customerName = document.querySelector('#customerName')
 const balance = document.querySelector('#balance')
+const output = document.getElementById('output')
+
+function renderAccounts() {
+    output.innerHTML = ''
+    if (accounts.length === 0) {
+        output.innerText = 'No accounts created yet.'
+        return
+    }
+    accounts.forEach(acc => {
+        const p = document.createElement('p')
+        p.innerText = `Account No: ${acc.accountNumber} | Name: ${acc.customerName} | Balance: ${acc.balance}`
+        output.appendChild(p)
+    })
+}
 
 accountForm.addEventListener('submit', function(e){
     e.preventDefault()
     const account = new BankAccount(customerName.value, +balance.value)
     accounts.push(account)
     console.log(accounts)
+    renderAccounts()
 })
 
 const depositForm = document.getElementById('depositForm')
@@ -34,8 +49,10 @@ depositForm.addEventListener('submit', function(e){
     if (account) {
         account.deposit(+amnt.value)
         console.log(accounts)
+        renderAccounts()
     } else {
         console.log('Account not found')
+        alert('Account not found')
     }
 })
 
@@ -49,7 +66,9 @@ withdrawForm.addEventListener('submit', function(e){
     if (account) {
         account.withdraw(+withdrawAmnt.value)
         console.log(accounts)
+        renderAccounts()
     } else {
         console.log('Account not found')
+        alert('Account not found')
     }
 })
